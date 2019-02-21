@@ -1,0 +1,317 @@
+Standard ML of New Jersey v110.80 [built: Thu Aug 18 15:00:00 2016]
+- use "test.sml";
+[opening test.sml]
+val it = "hellowolrd" : string
+val it = () : unit
+- use "test.sml";
+[opening test.sml]
+test.sml:4.1 Error: unbound variable or constructor: b
+test.sml:2.1 Error: unbound variable or constructor: a
+test.sml:2.1-7.8 Error: operator is not a function [tycon mismatch]
+  operator: string
+  in expression:
+    "hello" <errorvar>
+test.sml:2.1-7.8 Error: operator is not a function [tycon mismatch]
+  operator: string
+  in expression:
+    "world" "a"
+test.sml:2.1-7.8 Error: operator and operand don't agree [tycon mismatch]
+  operator domain: bool * bool
+  operand:         bool * string
+  in expression:
+    <errorvar> = "hello" <errorvar> = "world" "a" ^ "b"
+val it = () : unit
+- 
+
+Process sml finished
+Standard ML of New Jersey v110.80 [built: Thu Aug 18 15:00:00 2016]
+- use "test.sml";
+[opening test.sml]
+test.sml:4.1 Error: unbound variable or constructor: b
+test.sml:2.1 Error: unbound variable or constructor: a
+test.sml:2.1-7.8 Error: operator is not a function [tycon mismatch]
+  operator: string
+  in expression:
+    "hello" <errorvar>
+test.sml:2.1-7.8 Error: operator is not a function [tycon mismatch]
+  operator: string
+  in expression:
+    "world" "a"
+test.sml:2.1-7.8 Error: operator and operand don't agree [tycon mismatch]
+  operator domain: bool * bool
+  operand:         bool * string
+  in expression:
+    <errorvar> = "hello" <errorvar> = "world" "a" ^ "b"
+val it = () : unit
+- 
+
+Process sml finished
+Standard ML of New Jersey v110.80 [built: Thu Aug 18 15:00:00 2016]
+- use "test.sml";
+[opening test.sml]
+test.sml:7.3 Error: unbound variable or constructor: b
+test.sml:7.1 Error: unbound variable or constructor: a
+test.sml:4.1 Error: unbound variable or constructor: b
+test.sml:2.1 Error: unbound variable or constructor: a
+test.sml:2.1-7.4 Error: operator is not a function [tycon mismatch]
+  operator: string
+  in expression:
+    "hello" <errorvar>
+test.sml:2.1-7.4 Error: operator is not a function [tycon mismatch]
+  operator: string
+  in expression:
+    "world" <errorvar>
+test.sml:2.1-7.4 Error: operator and operand don't agree [tycon mismatch]
+  operator domain: bool * bool
+  operand:         bool * string
+  in expression:
+    <errorvar> = "hello" <errorvar> = "world" <errorvar> ^ <errorvar>
+val it = () : unit
+- use "test.sml";
+[opening test.sml]
+test.sml:4.1 Error: unbound variable or constructor: b
+test.sml:2.1 Error: unbound variable or constructor: a
+test.sml:2.1-7.18 Error: operator is not a function [tycon mismatch]
+  operator: string
+  in expression:
+    "hello" <errorvar>
+test.sml:2.1-7.18 Error: operator is not a function [tycon mismatch]
+  operator: string
+  in expression:
+    "world" "hello"
+test.sml:2.1-7.18 Error: operator and operand don't agree [tycon mismatch]
+  operator domain: bool * bool
+  operand:         bool * string
+  in expression:
+    <errorvar> = "hello" <errorvar> = "world" "hello" ^ " world!"
+val it = () : unit
+- 
+
+Process sml finished
+Standard ML of New Jersey v110.80 [built: Thu Aug 18 15:00:00 2016]
+- use "test.sml";
+[opening test.sml]
+test.sml:4.1 Error: unbound variable or constructor: b
+test.sml:2.1 Error: unbound variable or constructor: a
+test.sml:2.1-7.18 Error: operator is not a function [tycon mismatch]
+  operator: string
+  in expression:
+    "hello" <errorvar>
+test.sml:2.1-7.18 Error: operator is not a function [tycon mismatch]
+  operator: string
+  in expression:
+    "world" "hello"
+test.sml:2.1-7.18 Error: operator and operand don't agree [tycon mismatch]
+  operator domain: bool * bool
+  operand:         bool * string
+  in expression:
+    <errorvar> = "hello" <errorvar> = "world" "hello" ^ " world!"
+val it = () : unit
+- use "test.sml";
+[opening test.sml]
+val it = "hello world!" : string
+val it = () : unit
+- use "test.sml";
+[opening test.sml]
+[autoloading]
+[library $SMLNJ-BASIS/basis.cm is stable]
+[library $SMLNJ-BASIS/(basis.cm):basis-common.cm is stable]
+[autoloading done]
+test.sml:4.1-8.37 Error: operator is not a function [tycon mismatch]
+  operator: string
+  in expression:
+    " world!" (Int.toString 5)
+val it = () : unit
+- 
+
+Process sml finished
+Standard ML of New Jersey v110.80 [built: Thu Aug 18 15:00:00 2016]
+- use "test.sml";
+[opening test.sml]
+[autoloading]
+[library $SMLNJ-BASIS/basis.cm is stable]
+[library $SMLNJ-BASIS/(basis.cm):basis-common.cm is stable]
+[autoloading done]
+test.sml:4.1-8.37 Error: operator is not a function [tycon mismatch]
+  operator: string
+  in expression:
+    " world!" (Int.toString 5)
+val it = () : unit
+- use "test.sml";
+[opening test.sml]
+test.sml:4.1-9.18 Error: operator is not a function [tycon mismatch]
+  operator: string
+  in expression:
+    " world!" Int.toString
+val it = () : unit
+- 
+
+Process sml finished
+Standard ML of New Jersey v110.80 [built: Thu Aug 18 15:00:00 2016]
+- use "test.sml";
+[opening test.sml]
+[autoloading]
+[library $SMLNJ-BASIS/basis.cm is stable]
+[library $SMLNJ-BASIS/(basis.cm):basis-common.cm is stable]
+[autoloading done]
+test.sml:4.1-9.18 Error: operator is not a function [tycon mismatch]
+  operator: string
+  in expression:
+    " world!" Int.toString
+val it = () : unit
+- use "test.sml";
+[opening test.sml]
+test.sml:6.1-7.18 Error: operator is not a function [tycon mismatch]
+  operator: string
+  in expression:
+    (Int.toString 5) Int.toString
+val it = () : unit
+- use "test.sml";
+[opening test.sml]
+val it = "5" : string
+val it = () : unit
+- use "test.sml";
+[opening test.sml]
+val it = "5" : string
+val it = "1221" : string
+val it = () : unit
+- use "test.sml";
+[opening test.sml]
+test.sml:6.1 Error: unbound variable or constructor: a
+val it = () : unit
+- use "test.sml";
+[opening test.sml]
+val it = "5" : string
+test.sml:6.16 Error: expression or pattern begins with infix identifier "^"
+test.sml:6.16-6.35 Error: operator and operand don't agree [tycon mismatch]
+  operator domain: string * string
+  operand:         int -> string
+  in expression:
+    ^ Int.toString
+val it = () : unit
+- 
+
+Process sml finished
+Standard ML of New Jersey v110.80 [built: Thu Aug 18 15:00:00 2016]
+- use "test.sml";
+[opening test.sml]
+[autoloading]
+[library $SMLNJ-BASIS/basis.cm is stable]
+[library $SMLNJ-BASIS/(basis.cm):basis-common.cm is stable]
+[autoloading done]
+val it = "5122" : string
+val it = () : unit
+- use "test.sml";
+[opening test.sml]
+test.sml:7.34 Error: unbound variable or constructor: b
+test.sml:3.5-7.36 Error: operator is not a function [overload conflict]
+  operator: [int ty]
+  in expression:
+    122 (Int.toString a)
+val it = () : unit
+- 
+
+Process sml finished
+Standard ML of New Jersey v110.80 [built: Thu Aug 18 15:00:00 2016]
+- use "test.sml";
+[opening test.sml]
+[autoloading]
+[library $SMLNJ-BASIS/basis.cm is stable]
+[library $SMLNJ-BASIS/(basis.cm):basis-common.cm is stable]
+[autoloading done]
+test.sml:7.34 Error: unbound variable or constructor: b
+test.sml:3.5-7.36 Error: operator is not a function [overload conflict]
+  operator: [int ty]
+  in expression:
+    122 (Int.toString a)
+val it = () : unit
+- test.sml:7.34 Error: unbound variable or constructor: b
+test.sml:3.5-7.36 Error: operator is not a function [overload conflict]
+  operator: [int ty]
+  in expression:
+    122 (Int.toString a)
+val it = () : unit
+- stdIn:2.9-2.20 Error: syntax error: deleting  COLON REAL ID
+stdIn:3.10-3.18 Error: syntax error: deleting  REAL ID REAL
+stdIn:3.53-3.62 Error: syntax error: deleting  LBRACKET ID
+stdIn:3.71-4.11 Error: syntax error: deleting  RBRACKET ID
+stdIn:4.13-4.17 Error: syntax error: deleting  LBRACKET ID
+stdIn:4.20-5.5 Error: syntax error: deleting  RBRACKET IN
+stdIn:6.5-6.10 Error: syntax error: deleting  INT LPAREN
+stdIn:6.24-7.4 Error: syntax error: deleting  RPAREN VAL
+stdIn:7.8 Error: syntax error found at EQUALOP
+- 
+
+Process sml finished
+Standard ML of New Jersey v110.80 [built: Thu Aug 18 15:00:00 2016]
+- use "test.sml";
+[opening test.sml]
+[autoloading]
+[library $SMLNJ-BASIS/basis.cm is stable]
+[library $SMLNJ-BASIS/(basis.cm):basis-common.cm is stable]
+[autoloading done]
+test.sml:6.34 Error: unbound variable or constructor: b
+test.sml:6.15 Error: unbound variable or constructor: a
+test.sml:2.5-6.36 Error: operator is not a function [overload conflict]
+  operator: [int ty]
+  in expression:
+    122 (Int.toString <errorvar>)
+val it = () : unit
+- use "test.sml";
+[opening test.sml]
+test.sml:6.34 Error: unbound variable or constructor: y
+test.sml:2.5-6.36 Error: operator is not a function [overload conflict]
+  operator: [int ty]
+  in expression:
+    122 (Int.toString x)
+val it = () : unit
+- 
+
+Process sml finished
+Standard ML of New Jersey v110.80 [built: Thu Aug 18 15:00:00 2016]
+- use "test.sml";
+[opening test.sml]
+val x = 5 : int
+val y = 122 : int
+[autoloading]
+[library $SMLNJ-BASIS/basis.cm is stable]
+[library $SMLNJ-BASIS/(basis.cm):basis-common.cm is stable]
+[autoloading done]
+val it = "5122" : string
+val it = () : unit
+- 
+
+Process sml finished
+Standard ML of New Jersey v110.80 [built: Thu Aug 18 15:00:00 2016]
+- use "test.sml";
+[opening test.sml]
+[autoloading]
+[library $SMLNJ-BASIS/basis.cm is stable]
+[library $SMLNJ-BASIS/(basis.cm):basis-common.cm is stable]
+[autoloading done]
+val string = fn : int * int -> string
+val it = () : unit
+- use "test.sml";
+[opening test.sml]
+val string = fn : int * int -> string
+val it = () : unit
+- fun string (5,1);
+= fun string (3,2);
+stdIn:3.17-4.4 Error: syntax error: deleting  SEMICOLON FUN
+- fun string (3,2);
+= use "test.sml";
+stdIn:2.1-5.4 Error: syntax error: deleting  SEMICOLON ID
+- 
+
+Process sml finished
+Standard ML of New Jersey v110.80 [built: Thu Aug 18 15:00:00 2016]
+- use "test.sml";
+[opening test.sml]
+[autoloading]
+[library $SMLNJ-BASIS/basis.cm is stable]
+[library $SMLNJ-BASIS/(basis.cm):basis-common.cm is stable]
+[autoloading done]
+val string = fn : int * int -> string
+val it = () : unit
+- fun string (5,1);
+= 

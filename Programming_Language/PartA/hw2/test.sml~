@@ -1,0 +1,94 @@
+datatype suit = Clubs
+	      | Diamonds
+	      | Hearts
+	      | Spades
+		    
+datatype rank = Jack
+	      | Queen
+	      | King
+	      | Ace
+	      | Num of int
+			   
+type card = suit * rank
+
+datatype color = Red
+	       | Black
+		     
+datatype move = Discard of card
+	      | Draw
+
+exception IllegalMove
+fun card_color (s,r) =
+    case (s,r) of
+	(Hearts,r) => Red
+      | (Diamonds,r) => Red
+      | (_,r) => Black
+
+(* question 2 (b) *)
+fun card_value (s,r) =
+    case (s,r) of
+	(s,Ace) => 11
+     |  (s,Num x)=> x
+     | (s,_) => 10
+		    
+(* quesiton 2 (c)val remove_card = fn : card list * card * exn -> card list  *)
+fun same_card(c1 : card, c2 : card)=
+    c1=c2
+		    
+fun remove_card (cs,c,e) =				  
+    let fun h2 (cs,c,e,n) = 	
+	    case (cs,c,e,n) of
+		([],_,_,_) => []
+	      | (c1::cs',c,e,0) => raise e
+	      | (c1::cs',c,e,_) => if same_card(c1,c) then cs' else c1::h2(cs,c,e,n)
+	fun h1 (cs,c) =
+	    case (cs,c) of
+		([],c) => 0
+	      | (c1::cs',c) => if same_card(c1,c) then 1+h1(cs',c) else  h1(cs',c)
+    in h2(cs,c,e,h1(cs,c))
+    end
+	
+(*question 2 (d)  val all_same_color = fn : card list -> bool *)
+fun all_same_color cs =
+    case cs of
+	[] => true
+     | _::[] => true
+     | c1::(c2::cs') => (card_color(c1)=card_color(c2) andalso all_same_color(c2::cs')) 
+ 
+(*question 2 (e) val sum_cards = fn : card list -> int *)
+fun sum_cards cs =
+    let fun h1 (cs,sum) =	
+	case (cs,sum) of
+	    ([],sum) => sum
+	  | (c1::cs',sum) => h1(cs',card_value(c1)+sum)
+    in h1(cs,0)
+    end
+	
+(* question 2 (f) val score = fn : card list * int -> int  *)
+fun score (cs,g) =
+    let fun preliminary_score (cs,g) =
+	    if sum_cards(cs)>g then 3*(sum_cards(cs) - g) else g - sum_cards(cs)
+    in if all_same_color(cs) then preliminary_score(cs,g) div 2 else preliminary_score(cs,g)
+    end
+	
+(* question 2 (g) val officiate = fn : card list * move list * int -> int *)
+
+fun officiate (cs,ms,g) =
+    let fun h1(cs,ms,hc,g) =
+	    case (cs,ms,hc,g) of
+		([],ms,hc,g) => hc
+	      | (cs,[],hc,g) => hc	    
+	      | (c1::cs',Draw::ms',hc,g) => if sum_cards(c1::hc) > g
+					    then c1::hc
+					    else h1(cs',ms',c1::hc,g)
+	      | (c1::cs',Discard(card)::ms',hc,g) => h1(cs,ms',remove_card(hc,card,IllegalMove),g)
+						       
+    in score(h1(cs,ms,[],g),g)
+    end
+
+
+
+
+
+
+

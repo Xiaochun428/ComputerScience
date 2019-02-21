@@ -1,0 +1,12 @@
+fun oldest (dates : (int * int * int) list) =
+    if null dates
+    then NONE
+    else let 
+        val ans = oldest(tl dates)
+    in 
+	if isSome ans andalso is_older(valOf ans, hd dates)
+	then ans
+	else SOME (hd dates)
+    end 
+
+	     
