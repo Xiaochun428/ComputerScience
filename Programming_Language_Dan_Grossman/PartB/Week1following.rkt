@@ -22,13 +22,23 @@
       (* x (pow1 x (- y 1)))))
 
 (define pow2
-  (lambda ()
-    (lanbda (y)
-            (pow x y)))) ; currying
-(defube three-to0the (pow2 3))
+  (lambda (x)
+    (lambda (y)
+      (pow1 x y)))) ; currying
+
+(define three-to-the (pow2 3))
 
 ; Empty list: null
 ; Cons constructor: cons
 ;Access head of list: car
 ;Access tail of list: cdr
 ;Check for empty: null?
+
+; sum all the numbers in a list
+
+(define (sum xs)
+  (if (null? xs)
+      0
+      (+ (car xs) (sum (cdr xs)))))
+
+  
