@@ -46,3 +46,11 @@
   (if (null? xs)
       ys
       (cons (car xs) (my-append (cdr xs) ys))))
+
+; map
+(define (my-map f xs)
+  (if (null? xs)
+      null
+      (cons (f (car xs))
+            (my-map f (cdr xs)))))
+
