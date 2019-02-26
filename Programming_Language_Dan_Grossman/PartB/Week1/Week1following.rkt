@@ -54,3 +54,22 @@
       (cons (f (car xs))
             (my-map f (cdr xs)))))
 
+; letrect practice， this doest work since the language semantics had been
+; changed,  error occurs , I use a cariable before it is defined in letrec
+
+(define (silly-mod2 x)
+  (letrec
+      ([even? (lambda (x) (if (zero? x) #t (odd? (- x 1))))]
+       [odd? (lambda (x) (if (zero? x) #f (even? (- x 1))))])
+    (if (even? x) 0 1)))
+
+
+
+
+;(define (silly-mod3 x)
+ ; (define (even? x) (if (zero? x) #t (odd (- x 1))))
+  ;(define (odd? x) (if (zero? x) #f (even? (- x 1))))
+  ;(if (even? x) 0 1))
+
+
+
